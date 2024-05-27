@@ -1,0 +1,30 @@
+.container{
+ 
+   max-width: 1200px;
+   margin:5% 10%;
+   display:flex;
+   flex-direction:column;
+   .sobre{
+
+    display:flex;
+    flex-direction: column;
+       .titulo{
+        font-size: 30px;
+       margin-top:5%;
+       margin-bottom: 2%;
+       }
+
+       .conteudo{
+        display:flex;
+        justify-content: space-between;
+       
+        p{
+            width:45%;
+        }
+       }
+
+
+
+   }
+
+}
