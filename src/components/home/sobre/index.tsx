@@ -13,7 +13,7 @@ async function getData(){
 export async function Sobre() {
 
     const data = await getData();
- console.log(data.'about.description')
+ console.log(data)
 
 
     return (
