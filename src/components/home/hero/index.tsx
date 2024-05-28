@@ -1,19 +1,32 @@
+import { CtaButton } from './components/ctaButton';
 import styles from './styles.module.scss';
-import Image from 'next/image';
+
 
 interface Props {
     image: string;
+    titulo:string;
+    text_botão:string
+    url:string;
 }
 
+
+
 // Ajuste a assinatura da função para aceitar um objeto de props
-export function Hero({image}:Props) {
+export function Hero({image,titulo,text_botão,url}:Props) {
     return (
         //estilos in line abaixo
-            <div style={{backgroundImage:`url(${image})`, backgroundSize:'cover' , width:'100vwd',height:'30rem', backgroundPosition:'center'}}>
-                <h1>teste</h1>
+            <div className={styles.container} style={{backgroundImage:`url(${image})`, backgroundSize:'cover' , width:'100vwd',height:'30rem', backgroundPosition:'center'}}>
+             {!titulo&&(
+              <h1>um texto qualquer para ficar aqui</h1>
+            )}
+            <h1>{titulo}</h1>
+           <CtaButton
+           text={text_botão}
+           url={url}
+           />
+
+         
 
             </div>
-
-       
     );
 }

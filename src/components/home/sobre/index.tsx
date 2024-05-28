@@ -12,18 +12,18 @@ export function Sobre({ description, imagem }: SobreProps) {
     return (
         <div className={styles.container}>
             <section className={styles.sobre}>
-                <h1 className={styles.titulo}>Sobre</h1>
 
-                <div className={styles.conteudo}>
-                    <div>
+                
+                    <div className={styles.description}>
+                    <h1 className={styles.titulo}>Sobre</h1>
                         <p>{description}</p>
                     </div>
 
-                    <div>
+                    <div className={styles.banner}>
                         <Image src={imagem} alt='imagem sobre' width={500} height={500} />
                     </div>
 
-                </div>
+               
             </section>
         </div>
     );

@@ -8,6 +8,11 @@ const nextConfig = {
             hostname: 'cdn.cosmicjs.com',
           
           },
+          {
+            protocol: 'https',
+            hostname: 'encrypted-tbn0.gstatic.com',
+          
+          },
         ],
       },
 };
