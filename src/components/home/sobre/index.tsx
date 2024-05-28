@@ -1,43 +1,30 @@
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
+import Image from 'next/image';
 
-async function getData(){
-    try{
-   const res  = await fetch(`${process.env.URL_API}`)
-   return res.json()
-    }catch(error){
-        console.log(error)
-        return
-    }
+// Defina uma interface para as props
+interface SobreProps {
+    description: string;
+    imagem: string;
 }
 
-export async function Sobre() {
-
-    const data = await getData();
- console.log(data)
-
-
+// Ajuste a assinatura da função para aceitar um objeto de props
+export function Sobre({ description, imagem }: SobreProps) {
     return (
- 
-        <div className={styles.container}>  
-
+        <div className={styles.container}>
             <section className={styles.sobre}>
                 <h1 className={styles.titulo}>Sobre</h1>
 
                 <div className={styles.conteudo}>
-                    <div >
-                       {/*  <p>{data.about}</p> */}
+                    <div>
+                        <p>{description}</p>
                     </div>
 
-                    <div >
-                        <img src="" alt="imagem representantiva" />
+                    <div>
+                        <Image src={imagem} alt='imagem sobre' width={500} height={500} />
                     </div>
 
                 </div>
-
             </section>
-
-
         </div>
-
-    )
+    );
 }
