@@ -1,21 +1,23 @@
-import { Services } from './components/services';
-import styles from './styles.module.scss';
 
+import Image  from "next/image"
+import styles from './styles.module.scss'
 
-
-
-
-// Ajuste a assinatura da função para aceitar um objeto de props
-export function Servicos() {
-    return (
+interface ServiceProps{
+    image:string;
+    description:string;
+}
+export function Service({image,description}: ServiceProps){
+    return(
         <div className={styles.container}>
 
-            <h1>Conheça nossos serviços</h1>
-
-            <div className={styles.conteudo}>
-              <Services/>
-            </div>
-
+           <Image
+           src={image}
+           alt='imagem representativa do serviço'
+           width={400}
+           height= {400}
+           quality={100}
+           />
+          <h4>{description}</h4>
         </div>
-    );
+    )
 }

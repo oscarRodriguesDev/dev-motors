@@ -1,35 +1,13 @@
-.container {
+.container{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-evenly;
+     gap:2%;
 
-    h1 {
-        font-size: 36px;
-    }
+       h4{
+        font-size: 24px;
+       }
 
-    .conteudo {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(148, 227, 247, 0.308);
-        width: 100%;
-        height: 400px;
-
-
-        .service {
-            width: 350px;
-            height: 350px;
-            background-color: #272727;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            img{
-              width: 90%;
-              margin:0 auto;
-            }
-        }
-    }
+  
 }

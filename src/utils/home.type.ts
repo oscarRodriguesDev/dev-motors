@@ -36,6 +36,6 @@ interface ServiceProps {
 interface ContactProps {
     email: string;
     phone: string;
-    address: string;
+    adress: string;
     time: string;
 }
